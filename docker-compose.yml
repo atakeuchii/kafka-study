@@ -46,3 +46,13 @@ services:
       KAFKA_NODE_ID: 3
       KAFKA_LISTENERS: INTERNAL://:19092,EXTERNAL://:9096,CONTROLLER://:9093
       KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka-3:19092,EXTERNAL://localhost:9096
+  
+  postgres:
+    image: postgres:16
+    container_name: postgres
+    ports:
+      - "5438:5432"
+    environment:
+      POSTGRES_USER: kafka
+      POSTGRES_PASSWORD: kafka
+      POSTGRES_DB: shop
