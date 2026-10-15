@@ -5,6 +5,8 @@
             :url "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[org.clojure/clojure "1.12.5"]
                  [org.apache.kafka/kafka-clients "4.3.1"]
-                 [org.slf4j/slf4j-simple "2.0.17"]]
+                 [org.slf4j/slf4j-simple "2.0.17"]
+                 [com.github.seancorfield/next.jdbc "1.3.955"]
+                 [org.postgresql/postgresql "42.7.4"]]
   :jvm-opts ["-Dorg.slf4j.simpleLogger.defaultLogLevel=warn"]
   :repl-options {:init-ns kafka-study.core})
